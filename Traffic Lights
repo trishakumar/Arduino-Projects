@@ -1,0 +1,28 @@
+int r = 11;
+int y = 12;
+int g = 13;
+int rd = 2000;
+int yd = 500;
+int gd = 1500; 
+
+void setup() {
+  // put your setup code here, to run once:
+pinMode(11, OUTPUT);
+pinMode(12, OUTPUT);
+pinMode(13, OUTPUT);
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+digitalWrite(r, HIGH);
+delay(rd);
+digitalWrite(r, LOW);
+
+digitalWrite(y, HIGH);
+delay(yd);
+digitalWrite(y, LOW);
+
+digitalWrite(g, HIGH);
+delay(gd);
+digitalWrite(g, LOW);
+}
