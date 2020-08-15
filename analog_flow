@@ -1,0 +1,40 @@
+int r = 6;
+int y = 9;
+int g = 10;
+int w = 11;
+int br = 15;
+int by = 85;
+int bg = 175;
+int bw = 255;
+void setup() {
+  // put your setup code here, to run once:
+pinMode(r, OUTPUT);
+pinMode(y, OUTPUT);
+pinMode(g, OUTPUT);
+pinMode(w, OUTPUT);
+
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+analogWrite(r, br);
+delay(500);
+analogWrite(y, by);
+delay(500);
+analogWrite(g, bg);
+delay(500);
+analogWrite(w, bw);
+delay(500);
+
+analogWrite(r, bw);
+delay(500);
+analogWrite(y, bg);
+delay(500);
+analogWrite(g, by);
+delay(500);
+analogWrite(w, br);
+delay(500);
+
+
+
+}
