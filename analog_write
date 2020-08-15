@@ -1,0 +1,17 @@
+/* Analog Write can be used in specific digital pins only. These pins are 3, 5, 6, 9, 10, 11. 
+The brightness of the LED can be adjusted by using the numbers between 0 to 255. 
+0 stands for 0 volts and 255 stands for 5 volts */
+
+
+
+int redPin = 9;
+int bright = 255;
+void setup() {
+  // put your setup code here, to run once:
+pinMode(redPin, OUTPUT);
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+analogWrite(redPin, bright);
+} 
