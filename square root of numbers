@@ -1,0 +1,20 @@
+int a = 2;
+int s;
+int wait = 750;
+String ans = "square of ";
+String z = " = ";
+ void setup() {
+  // put your setup code here, to run once:
+Serial.begin(9600);
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+ s = a * a;
+Serial.print(ans);
+Serial.print(a);
+a = a + 1;
+Serial.print(z);
+Serial.println(s);
+delay(wait);
+}
