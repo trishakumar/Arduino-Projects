@@ -1,0 +1,68 @@
+ int myPin = 2;
+ int a = 8;
+ int b = 9;
+ int c = 10;
+ int d = 11;
+ float V2;
+ int dt = 250;
+ int readVal;
+ void setup() {
+  // put your setup code here, to run once:
+pinMode(a, OUTPUT);
+pinMode(b, OUTPUT);
+pinMode(c, OUTPUT);
+pinMode(d, OUTPUT);
+Serial.begin(9600);
+
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+  readVal = analogRead(a);
+  V2 = (5./1023.)*readVal;
+  Serial.print("Pontentiometer Voltage is ");
+  Serial.println(V2); 
+  if (V2 > 2.0 && V2 < 3.0) {
+    digitalWrite(a, HIGH);
+  }
+  if (V2 < 2.0 || V2 > 3.0) 
+  {
+    digitalWrite(a, LOW);
+  }
+  delay(dt);
+
+
+
+  if (V2 > 2.0 && V2 < 3.0) {
+    digitalWrite(b, HIGH);
+  }
+  if (V2 < 2.0 || V2 > 3.0) 
+  {
+    digitalWrite(b, LOW);
+  }
+  delay(dt);
+
+
+
+
+  if (V2 > 2.0 && V2 < 3.0) {
+    digitalWrite(c, HIGH);
+  }
+  if (V2 < 2.0 || V2 > 3.0) 
+  {
+    digitalWrite(c, LOW);
+  }
+  delay(dt);
+
+
+
+
+  if (V2 > 2.0 && V2 < 3.0) {
+    digitalWrite(d, HIGH);
+  }
+  if (V2 < 2.0 || V2 > 3.0) 
+  {
+    digitalWrite(d, LOW);
+  }
+  delay(dt);
+}
