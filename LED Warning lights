@@ -1,0 +1,78 @@
+int a = 8;
+int b = 9;
+int c = 10;
+int d = 11;
+int e = 12;
+int potVal;
+int t = 100;
+int potPin = A0;
+
+
+void setup() {
+  // put your setup code here, to run once:
+Serial.begin(9600);
+pinMode(potVal, INPUT);
+pinMode(a, OUTPUT);
+pinMode(b, OUTPUT);
+pinMode(c, OUTPUT);
+pinMode(d, OUTPUT);
+pinMode(e, OUTPUT);
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+potVal = analogRead(potPin);
+ Serial.println(potVal);
+ delay(t);
+
+ while(potVal > 1 && potVal < 200)
+ {
+  digitalWrite(a, HIGH);
+  potVal = analogRead(potPin);
+  Serial.println(potVal);
+delay(t);
+  
+ }
+ digitalWrite(a, LOW);
+
+ while(potVal > 201 && potVal < 400)
+ {
+  digitalWrite(b, HIGH);
+  potVal = analogRead(potPin);
+  Serial.println(potVal);
+delay(t);
+  
+ }
+ digitalWrite(b, LOW);
+
+ while(potVal > 401 && potVal < 600)
+ {
+  digitalWrite(c, HIGH);
+  potVal = analogRead(potPin);
+  Serial.println(potVal);
+delay(t);
+  
+ }
+ digitalWrite(c, LOW);
+
+
+ while(potVal > 601 && potVal < 800)
+ {
+  digitalWrite(d, HIGH);
+  potVal = analogRead(potPin);
+  Serial.println(potVal);
+delay(t);
+  
+ }
+ digitalWrite(d, LOW);
+
+ while(potVal > 801 && potVal < 1000)
+ {
+  digitalWrite(e, HIGH);
+  potVal = analogRead(potPin);
+  Serial.println(potVal);
+delay(t);
+  
+ }
+ digitalWrite(e, LOW);
+}
